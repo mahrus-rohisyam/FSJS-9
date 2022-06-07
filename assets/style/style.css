@@ -1,0 +1,80 @@
+html {
+    scroll-behavior: smooth;
+}
+
+li,
+p {
+    word-wrap: break-word;
+}
+ol,
+ul {
+    padding: 0 0 0 2.284em;
+}
+ul {
+    list-style: square;
+}
+details,
+figure > img,
+main,
+summary {
+    display: block;
+}
+
+a {
+    color: orange;
+}
+
+a:hover {
+    color: purple;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 2px;
+    line-height: 1.5em;
+}
+h1 {
+    font-size: 2em;
+    margin: 0 0 0.571em;
+}
+h2 {
+    font-size: 1.714em;
+    margin: 0.666em 0;
+}
+h3 {
+    font-size: 1.428em;
+    margin: 0.7em 0;
+}
+h4 {
+    font-size: 1.285em;
+    margin: 0.888em 0;
+}
+h5 {
+    font-size: 1.142em;
+    margin: 1em 0;
+}
+h6 {
+    font-size: 1em;
+    margin: 1.142em 0;
+}
+
+
+body {
+    /* background: #222831; */
+    color: #1e1e1e;
+    font-family: Helvetica, Arial, sans-serif;
+    /* font-size: 18px; */
+    line-height: 1.714em;
+    min-height: 100vh;
+    position: relative;
+    scrollbar-color: #eee #222831;
+    scrollbar-width: 5px;
+}
+
+footer a {
+    color: orange;
+}
