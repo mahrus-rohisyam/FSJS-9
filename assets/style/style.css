@@ -88,19 +88,18 @@ body {
     position: relative;
     scrollbar-color: #eee #222831;
     scrollbar-width: 5px;
+    overflow-x: hidden;
 }
 
 nav {
-    overflow: hidden;
     padding: 15px 0 15px 0;
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    position: -webkit-sticky;
     top: 0;
-    left: 0;
-    right: 0;
 }
 
 nav li {
@@ -125,11 +124,13 @@ nav div img {
 
 footer {
     display: flex;
+    position: relative;
     flex-direction: column;
     color: #1e1e1e;
     text-align: center;
     justify-content: center;
     margin: 0;
+    z-index: -1;
     font-weight: bold;
     background-color: var(--color-primary);
 }
@@ -155,27 +156,23 @@ footer a {
 }
 
 .menu {
-    transform: scale(0);
+    display: none;
     flex-direction: column;
     height: 30px;
     justify-content: space-between;
     position: absolute;
     right: 0;
     cursor: pointer;
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
 }
 
 .menu input {
     position: absolute;
+    top: -5px;
     width: 35px;
-    height: 40px;
-    top: -10px;
+    height: 35px;
     opacity: 0;
     cursor: pointer;
-    z-index: 2;
+    z-index: 99;
 }
 
 .menu span {
@@ -190,11 +187,11 @@ footer a {
     -o-transition: all 0.75s;
 }
 
-.menu span:nth-child(2) {
+.menu span:nth-child(2){
     transform-origin: 0 0;
 }
 
-.menu span:last-child {
+.menu span:nth-child(4){
     transform-origin: 0 0;
 }
 
@@ -206,17 +203,18 @@ footer a {
     -o-transform: rotate(45deg) translate(5px, 1px);
 }
 
-.menu input:checked ~ span:nth-child(4) {
-    transform: rotate(-45deg) translate(1px, 0);
-    -webkit-transform: rotate(-45deg) translate(1px, 0);
-    -moz-transform: rotate(-45deg) translate(1px, 0);
-    -ms-transform: rotate(-45deg) translate(1px, 0);
-    -o-transform: rotate(-45deg) translate(1px, 0);
+.menu input:checked ~ span:last-child {
+    transform: rotate(-45deg) translate(1px, 0px);
+    -webkit-transform: rotate(-45deg) translate(1px, 0px);
+    -moz-transform: rotate(-45deg) translate(1px, 0px);
+    -ms-transform: rotate(-45deg) translate(1px, 0px);
+    -o-transform: rotate(-45deg) translate(1px, 0px);
 }
 
 .menu input:checked ~ span:nth-child(3) {
     opacity: 0;
 }
+
 
 /* ID s */
 #short {
@@ -270,11 +268,44 @@ footer a {
     }
 
     nav ul {
-        display: none;
+        display: flex;
+        top: -16px;
+        right: 0;
+        position: absolute;
+        flex-direction: column;
+        background-color: #1e1e1e;
+        width: 60%;
+        height: 100vh;
+        padding: 10px 20px;
+        transform: translate(100%);
+        -webkit-transform: translate(100%);
+        -moz-transform: translate(100%);
+        -ms-transform: translate(100%);
+        -o-transform: translate(100%);
+        transition: all 0.75s;
+        -webkit-transition: all 0.75s;
+        -moz-transition: all 0.75s;
+        -ms-transition: all 0.75s;
+        -o-transition: all 0.75s;
+        opacity: 0;
+}
+
+    .slide {
+        opacity: 1;
+        transform: translate(0%);
+        -webkit-transform: translate(0%);
+        -moz-transform: translate(0%);
+        -ms-transform: translate(0%);
+        -o-transform: translate(0%);
+}
+
+    nav ul li {
+        padding: 10px;
     }
 
     .menu {
         display: flex;
+        z-index: 999;
     }
 
     .container {

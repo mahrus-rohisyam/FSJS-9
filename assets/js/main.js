@@ -1,7 +1,6 @@
-const articleLoader = () => {
-    
-}
+const toggle = document.querySelector('.menu input')
+const nav = document.querySelector('nav ul')
 
-const mobileMenu = () => {
-    
-}
+toggle.addEventListener('click', function () {
+    nav.classList.toggle('slide')
+})
