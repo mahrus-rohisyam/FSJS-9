@@ -155,13 +155,27 @@ footer a {
 }
 
 .menu {
-    display: none;
+    transform: scale(0);
     flex-direction: column;
     height: 30px;
     justify-content: space-between;
     position: absolute;
     right: 0;
     cursor: pointer;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+
+.menu input {
+    position: absolute;
+    width: 35px;
+    height: 40px;
+    top: -10px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .menu span {
@@ -169,6 +183,39 @@ footer a {
     width:30px;
     height: 3px;
     background-color: var(--color-primary);
+    transition: all 0.75s;
+    -webkit-transition: all 0.75s;
+    -moz-transition: all 0.75s;
+    -ms-transition: all 0.75s;
+    -o-transition: all 0.75s;
+}
+
+.menu span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu span:last-child {
+    transform-origin: 0 0;
+}
+
+.menu input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(5px, 1px);
+    -webkit-transform: rotate(45deg) translate(5px, 1px);
+    -moz-transform: rotate(45deg) translate(5px, 1px);
+    -ms-transform: rotate(45deg) translate(5px, 1px);
+    -o-transform: rotate(45deg) translate(5px, 1px);
+}
+
+.menu input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(1px, 0);
+    -webkit-transform: rotate(-45deg) translate(1px, 0);
+    -moz-transform: rotate(-45deg) translate(1px, 0);
+    -ms-transform: rotate(-45deg) translate(1px, 0);
+    -o-transform: rotate(-45deg) translate(1px, 0);
+}
+
+.menu input:checked ~ span:nth-child(3) {
+    opacity: 0;
 }
 
 /* ID s */
@@ -204,14 +251,18 @@ footer a {
 }
 
 /* Media Queries */
+
+/* Laptop */
 @media screen and (max-width: 1080) {
     
 }
 
+/* Mobile */
 @media screen and (max-width: 576px) {
     
 }
 
+/* Tablet */
 @media screen and (max-width: 768px) {
     nav {
         justify-content: space-between;
