@@ -108,15 +108,87 @@ const namaFungsi2 = (a, b) => {         //Arrow function pake param
 // console.log(13 == '13')   //true       //Karena dibaca string
 
 /* ------------------------------- Conditional ------------------------------ */
-let login = true
-let pengguna = 'Exist'
-let email = null
+// let login = true
+// let pengguna = 'Exist'
+// let email = null
 
-if (login == false) {
-    alert('Login berhasil !')
-} else if (email == null) {
-    alert('Silahkan masukan email')
-} else {
-    alert('Error')
-}
+// if (login == false) {
+//     alert('Login berhasil !')
+// } else if (email == null) {
+//     alert('Silahkan masukan email')
+// } else {
+//     alert('Error')
+// }
 /* --------------------------------- Looping -------------------------------- */
+
+/* --------------------------------- Latihan -------------------------------- */
+
+// Segitiga
+const luasSegitiga = (alas, tinggi) => {
+    let result = (alas * tinggi) / 2
+    console.log(result)
+}
+
+const kelilingSegitiga = (alas) => {
+    let result = alas + alas + alas
+    console.log(result)
+}
+
+//Lingkaran
+const phi = 3.14
+
+const luasLingkaran = (ruas) => {
+    let result = Math.PI * (ruas * ruas)
+    console.log(result.toFixed(0))
+}
+
+const kelilingLingkaran = (ruas) => {
+    let result  = 2 * phi * ruas
+    console.log(result.toFixed(0))
+}
+
+//Jajar genjang
+const luasJajarGenjang = (alas, tinggi) => {
+    let result = alas * tinggi
+    console.log(result)
+}
+
+const kelilingJajarGenjang = (sisiMiring, alas) => {
+    let result = 2 * (alas * sisiMiring)
+    console.log(result)
+}
+
+//Prisma
+const luasPermukaanPrisma = (luasAlas, LuasSelimut) => {
+    let result = 2 * (luasAlas + LuasSelimut)
+    console.log(result)
+}
+
+const volumePrisma = (luasAlas, tinggi) => {
+    let result = luasAlas * tinggi
+    console.log(result)
+}
+
+//Volume balok dan Kubus
+const volumeBalok = (panjang, lebar) => {
+    let result = panjang * lebar
+    console.log(result)
+}
+
+const volumeKubus = (sisi) => {
+    let result = sisi * sisi
+    console.log(result)
+}
+
+//Volume kerucut
+const luasPermukaanKerucut = (ruas, sisiMiring) => {
+    let result = phi * ruas (ruas + sisiMiring)
+    console.log(result)
+}
+
+const volumeKerucut = (ruas, tinggi) => {
+    let result = 1/3 * phi * ruas * ruas * tinggi
+    console.log(result)
+}
+//Testing
+console.log(luasLingkaran(20))
