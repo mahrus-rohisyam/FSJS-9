@@ -1,0 +1,12 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mahrus-rohisyam/FSJS-9.git",
+  "author": "Mahrus Sayid <mahrusaim@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass --watch assets/sass/style.scss ./build/sass/style.css",
+    "tsp": "tsc && node ./build/js/main.js"
+  }
+}
